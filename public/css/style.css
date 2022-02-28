@@ -1,0 +1,67 @@
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+@media (min-width:800px){
+    body{
+        margin-left:60px;
+        margin-right:60px;
+    }
+    img{
+      max-width:50% !important;
+    }
+    .mapgoogle{
+      width: 500px;
+      height: 350px; 
+      border:1px solid black; 
+    }
+}
+
+@media (max-width:799px){
+    .mapgoogle{
+      width: 250px;
+      height: 175px;
+      border: 1px solid black;
+    }
+}
+
+footer{
+  background-color: #1d5f6d; 
+}
+
+.navbar{
+  background-color: #1d5f6d;
+}
+
+.footer-element{
+  color: white !important;
+}
+
+a.nav-link{
+  color:white !important;
+} 
+
+a.text-reset{
+  text-decoration: none;
+}
+
+a.text-reset:hover{
+    color: #c87f36 !important;
+}
+
+h6.text-uppercase{
+  text-decoration: underline;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li.list-group-item{
+  background-color: white !important;
+}
+

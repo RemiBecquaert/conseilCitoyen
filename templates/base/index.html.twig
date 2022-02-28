@@ -1,0 +1,148 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}Accueil{% endblock %}
+
+{% block body %}
+
+{{ parent() }}
+    <div class="jumbotron text-dark text-center">
+      <h1 class="center display-2">Association Terre Noeve</h1>
+      <p class="lead">Bienvenue sur le site web du Conseil Citoyen de Noeux-Les-Mines !</p>
+      <p>Vous ne savez pas qui nous sommes, ce que nous faisons et nos projets ? Pas de panique, nous allons vous expliquer !&#128540</p>
+    </div>
+  <br/>
+
+  <img src= "{{ asset ('images/brico.jpg') }}" class="img-fluid center w-75" style="border: 1px solid black !important; margin-top:10px;" alt="bricotheque">
+
+  <br/><br/>
+  <div data-aos="fade-up">
+    <h2 class="text-dark text-center" id="presentation"><u>Terre Noeve, Conseil Citoyen de Noeux-Les-Mines, c'est quoi ?</u></h2><br/>
+    <h5 class="text-dark text-center">L'association Terre Noeve est une association sous loi 1901 créée le 8 janvier 2016 qui a pour but de regrouper des habitants volontaires du quartier Terre Noeve,<br/> situé à Noeux-Les-Mines dans les Hauts-de-France, afin de le redynamiser.<br/>Nous organisons des évènements et des actions dans les quartiers prioritaires de Noeux-Les-Mines afin de rassembler et de fédérer ces derniers.<br/><br/>L'association Terre Noeve fait partie de ce que l'on appelle un "Conseil Citoyen".</h5><br/><br/>
+    <button type="button" class="btn btn-primary center" data-bs-toggle="modal" data-bs-target="#exampleModal">Qu'est-ce qu'un Conseil Citoyen ?</button>
+  </div>
+  <br/>
+
+  <div data-aos="fade-up">
+    <h2 class="text-dark text-center">Focus sur l'équipe dynamique de l'association !&#128170</h2><br/>
+  </div>
+
+  <div data-aos="fade-right">
+    <div class="card mb-3 px-5 text-dark bg-white">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ asset ('images/benevole4.jpg') }}" class="img-fluid rounded-start" alt="photo annabelle">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Annabelle</h5>
+            <p class="card-text">*Le texte d'Annabelle*</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="fade-left">
+    <div class="card mb-3 px-5 text-dark bg-white ">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Michel</h5>
+            <p class="card-text">*Le texte de Michel*</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="{{ asset ('images/benevole2.jpg') }}" class="img-fluid rounded-start" alt="photo michel">
+        </div>    
+      </div>
+    </div>
+  </div>
+
+
+  <div data-aos="fade-right">
+    <div class="card mb-3 px-5 text-dark bg-white ">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ asset ('images/benevole3.jpg') }}" class="img-fluid rounded-start" alt="photo virginie">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Virginie</h5>
+            <p class="card-text">*Le texte de Virginie*</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="fade-left">
+    <div class="card mb-3 px-5 text-dark bg-white ">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Isabelle</h5>
+            <p class="card-text">*Le texte d'Isabelle*</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <img src="{{ asset ('images/benevole5.jpg') }}" class="img-fluid rounded-start" alt="photo isabelle">
+        </div>    
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="fade-right">
+    <div class="card mb-5 px-5 text-dark bg-white ">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="{{ asset ('images/benevole1.jpg') }}" class="img-fluid rounded-start" alt="photo martine">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title font-weight-bold">Martine</h5>
+            <p class="card-text">*Le texte de Martine*</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div data-aos="zoom-in-up">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3 class="text-dark"><u>Pour nous trouver, rien de plus simple !</u>&#128077</h3><br/>
+          <h5 class="text-dark"><i class="fas fa-address-card"></i> Association Terre Noeve, 28 rue de Boulogne<br/>62660 NOEUX-LES-MINES<br/><br/><i class="fab fa-facebook"></i><a href="https://www.facebook.com/conseilcitoyenterrenoeve"> Page Facebook de l'Association</a></h5>
+          <br/><button type="button" class="btn btn-primary" onclick="location.href='{{path('contact')}}'">Contacter l'Association Terre Noeve</button>
+
+        </div>      
+        <div class="col">
+          <iframe class="mapgoogle" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2538.880546417734!2d2.6708364158354487!3d50.48056749307515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd3dbf84959885%3A0x446480c4a25e7dbf!2sBricoth%C3%A8que%20de%20Noeux%20Les%20Mines!5e0!3m2!1sfr!2sfr!4v1643418256973!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br/>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="background-color:#1d5f6d;">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Conseil Citoyen ?</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-center">Le Conseil Citoyen est initié par la loi de programmation pour la ville et la cohésion urbaine du 24 février 2014 dans le cadre des nouveaux contrats de ville. Il est important de souligner l'aspect autonome du Conseil Citoyen: il ne doit pas être présidé ni animé par des élus de la ville, du département...<br/><hr>Cliquez sur le lien pour en savoir plus !&#128270</p>
+          </div>
+          <div class="modal-footer">
+            <button onclick="location.href='https://www.conseilscitoyens.fr/quest-ce-qu-un-conseil-citoyen'" type="button" class="btn btn-light text-dark">Je veux en savoir plus !</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+{% endblock %}

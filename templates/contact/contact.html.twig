@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}Contact{% endblock %}
+
+{% block body %}
+{{ parent() }}
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v12.0" nonce="zMFUn0eh"></script>
+
+<br/>
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <h2 class="text-dark text-center"><u>Formulaire de contact</u></h2><br>
+            <h5 class="text-dark text-center">Si vous désirez nous contacter, vous pouvez le faire directement ici<br>via le formulaire de contact ci-dessous !</h5>
+
+                {{form_start(form)}}
+                <hr>
+                {{form_widget(form.nom, {'attr':{'class':'form-control', 'placeholder':'Votre nom'}})}}
+                <hr>
+                {{form_widget(form.prenom, {'attr':{'class':'form-control', 'placeholder':'Votre prénom'}})}}
+                <hr>
+                {{form_widget(form.email, {'attr':{'class':'form-control', 'placeholder':'Votre email'}})}}
+                <hr>
+                {{form_widget(form.sujet, {'attr':{'class':'form-control', 'placeholder':'Objet'}})}}
+                <hr>
+                {{form_widget(form.message, {'attr':{'class':'form-control', 'placeholder':'Votre message'}})}}
+                <hr>
+                {{form_widget(form.envoyer, {'label':"Soumettre le formulaire", 'attr':{'class':'btn bg-primary justify-content-center'}})}}
+                {{form_end(form, {render_rest: true})}} 
+        </div>
+        <br/>
+        <div class="col-sx-12 col-sm-12 col-md-12 col-lg-6 justify-content-center">
+            <h5 class="text-dark text-center">Vous pouvez également nous retrouver ici sur Facebook !</h5><br>
+                <div class="fb-page justify-content-center" data-href="https://www.facebook.com/conseilcitoyenterrenoeve" data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/conseilcitoyenterrenoeve" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/conseilcitoyenterrenoeve">Conseil citoyen de Noeux les Mines</a></blockquote></div>
+            <br/>
+        </div>
+    </div>
+</div><br/>
+
+{% endblock %}

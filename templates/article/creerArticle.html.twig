@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }}Créer un article{% endblock %}
+
+{% block body %}
+{{ parent() }}
+<br/>
+<h2 class="text-dark text-center"><u>Formulaire de création d'article</u></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+        {{form_start(form)}}
+
+            {{form_label(form.titre, 'Titre de l\'article', {'label_attr':{'class':'fw-bold'}})}}
+            {{form_widget(form.titre, {'attr':{'class':'form-control', 'placeholder':'Le titre'}})}}
+            
+            {{form_label(form.texte1, 'Le premier texte', {'label_attr':{'class':'fw-bold'}})}}
+            {{form_widget(form.texte1, {'attr':{'class':'form-control', 'placeholder':'Le premier texte'}})}}
+
+            {{form_label(form.texte2, 'Le deuxième texte', {'label_attr':{'class':'fw-bold'}})}}
+            {{form_widget(form.texte2, {'attr':{'class':'form-control', 'placeholder':'Le deuxième texte'}})}}
+
+            {{form_label(form.auteur, 'Auteur de l\'article', {'label_attr':{'class':'fw-bold'}})}}
+            {{form_widget(form.auteur, {'attr':{'class':'form-control', 'placeholder':'L\'auteur'}})}} 
+
+            {{form_widget(form.creer, {'label':"Soumettre le formulaire", 'attr':{'class':'btn bg-primary justify-content-center'}})}}
+
+
+        {{form_end(form, {render_rest: true})}} 
+        </div>
+        <div class="col-sx-12 col-sm-12 col-md-12 col-lg-6 justify-content-center">
+            <br/>
+            <h4 class="text-dark text-center">Voici le formulaire de création d'article qui apparaîtra dans la page <a href="http://conseilcitoyen-noeux.remi-becquaert.fr/actu">d'actualité de l'association.</a></h4>
+            <br/>
+            
+            <h4 class="text-dark text-center">Besoin d'aide ? <br/><a href="https://example.com">Cliquez ici pour accéder à la page d'aide</a></h4>
+
+        </div>        
+    </div>
+</div>    <br/>
+{% endblock %}
